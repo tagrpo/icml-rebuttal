@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+        
+        .video-container {
+            position: relative;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background: #000;
+            aspect-ratio: 16/9;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .input-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 0.75rem;
+            background: #f1f5f9;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 1500px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            vertical-align: top;
+            background: #fff;
+        }
+
+        .comparison-table thead th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .comparison-table .left-col {
+            width: 280px;
+            background: #f8fafc;
+        }
+
+        .method-cell {
+            width: 96px;
+            font-weight: 700;
+            color: #1e293b;
+            text-align: center;
+            background: #f8fafc;
+        }
+
+        .sample-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            background: #ffffff;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="max-w-5xl mx-auto pt-16 pb-8 px-4 text-center"></header>
+
+    <section class="max-w-[1800px] mx-auto px-6 mb-20">
+        <div id="samples-root" class="space-y-10"></div>
+    </section>
+
+    <script>
+        const promptBySample = {
+            0: "A girl with short black hair and a white shirt is seen in a room with various containers and a basket in the background. She initially has her hand near her face, appearing to be in discomfort or pain. She then closes her eyes and starts to cry, bringing her hand closer to her face. The girl continues to cry, burying her face in her hand, and then begins to wipe her tears with her hand. Finally, she lifts her head slightly, still wiping her tears, and appears to be speaking.",
+            1: "A blonde girl with pigtails, wearing a red and white outfit with gloves, is seen running and looking determined. The background is a blur of colors, indicating fast movement. The camera then switches to an overhead view, showing the blonde girl running alongside two other characters, one with long purple hair and the other with blue hair and a bare upper body. The three characters are running in a staggered formation on a tiled floor.",
+            2: "A character with a spiked helmet and a burlap mask extends their right hand forward while their left hand, initially covering their face, gradually moves away from their mask. The character's left hand continues to move away from the mask, revealing more of their face. The character then fully extends their left hand outward, away from their face, while their right hand remains extended forward. The background shows a natural setting with trees and rocks, indicating an outdoor environment.",
+            3: "A man is sitting on a small stool by a pool, holding a phone in his left hand and touching his hair with his right hand. He then picks up a hose with his right hand and sprays water on the phone. Afterward, he puts down the hose and picks up a bottle from a blue bucket in front of him. He raises the bottle in the air.",
+            4: "In a cityscape background with tall buildings and green trees, a black car and a white car are driving on a road. The black car is following the white car closely as they move from left to right across the screen. The background remains consistent with the city skyline and greenery, while the cars maintain their positions relative to each other. As they continue driving, the white car gradually moves further ahead of the black car. Eventually, the white car exits the frame to the right, while the black car continues to follow behind."
+        };
+
+        const steps = [5, 10, 15, 20];
+        const sampleStart = 0;
+        const sampleEnd = 4;
+        const root = document.getElementById("samples-root");
+
+        function posterColor(sampleId) {
+            const colors = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000"];
+            return colors[sampleId % colors.length];
+        }
+
+        function buildVideoCell(method, sampleId, step, highlight) {
+            const src = `assets/${method}_sample${sampleId}_step${step}.mp4`;
+            const borderClass = highlight ? " border-2 border-indigo-500" : "";
+            return `
+                <td>
+                    <div class="video-container${borderClass}">
+                        <video autoplay loop muted playsinline poster="https://placehold.co/600x338/${posterColor(sampleId)}/FFF?text=Loading+Video">
+                            <source src="${src}" type="video/mp4">
+                        </video>
+                    </div>
+                </td>
+            `;
+        }
+
+        function buildSampleCard(sampleId) {
+            const prompt = promptBySample[sampleId] || `Sample ${sampleId} input prompt.`;
+            const danceCells = steps.map((step) => buildVideoCell("dancegrpo", sampleId, step, false)).join("");
+            const tagCells = steps.map((step) => buildVideoCell("tagrpo", sampleId, step, true)).join("");
+
+            return `
+                <div class="sample-card">
+                    <div class="table-wrap">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th class="left-col">Input Image + Prompt</th>
+                                    <th>Method</th>
+                                    <th>Step 5</th>
+                                    <th>Step 10</th>
+                                    <th>Step 15</th>
+                                    <th>Step 20</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="left-col" rowspan="2">
+                                        <img class="input-image" src="assets/Sample${sampleId}-input.jpg" alt="Sample ${sampleId} input image">
+                                        <p class="text-sm leading-relaxed">${prompt}</p>
+                                    </td>
+                                    <td class="method-cell">DanceGRPO</td>
+                                    ${danceCells}
+                                </tr>
+                                <tr>
+                                    <td class="method-cell">TAGRPO</td>
+                                    ${tagCells}
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+        }
+
+        for (let sampleId = sampleStart; sampleId <= sampleEnd; sampleId += 1) {
+            root.insertAdjacentHTML("beforeend", buildSampleCard(sampleId));
+        }
+    </script>
+
+</body>
+</html>
