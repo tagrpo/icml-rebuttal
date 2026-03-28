@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+        
+        .video-container {
+            position: relative;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background: #000;
+            aspect-ratio: 16/9;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dancegrpo {
+            border: 2px solid #64748b;
+        }
+
+        .tagrpo {
+            border: 2px solid #4f46e5;
+        }
+
+        .base {
+            border: 2px solid #cbd5e1;
+        }
+
+        .method-label {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(15, 23, 42, 0.8);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            z-index: 10;
+        }
+
+        .prompt-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 0.875rem 1rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-6">
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A person wearing a helmet and a black jacket rides a red and black motorcycle on a road in an industrial area with scattered debris and construction barriers. The rider turns right, passing by a red and white striped barrier and a small plant. The rider continues straight, moving towards a yellow-striped area on the road. The rider approaches a small building with graffiti and a sign, and a larger structure with an elevated roadway in the background. The rider passes the small building and continues straight, heading towards the elevated roadway and more industrial buildings in the distance.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                        <source src="assets/Sample1Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                        <source src="assets/Sample1Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                        <source src="assets/Sample1TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A small creature with white fur, red shoes, and a red scarf stands on a stone-paved area with a mountainous background. A boy with black hair, wearing a gray and red outfit, runs up to the creature and stops beside it, looking at it and talking. A girl with orange hair, wearing a yellow coat and blue pants, walks up and stands next to the boy, looking at the creature. The creature closes its eyes and appears to be speaking. The girl covers her mouth with her hand and seems to be saying something. The boy and the girl then turn their heads to look in the same direction as the creature.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                        <source src="assets/Sample2Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                        <source src="assets/Sample2Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                        <source src="assets/Sample2TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A man in a purple uniform with a cape stands in the center, surrounded by several other uniformed individuals. Two soldiers begin to escort a girl in a red outfit towards the man. The soldiers continue to bring the girl closer to the man, who remains stationary and observing the situation. More soldiers join the scene, surrounding the girl and the man. The girl is now fully surrounded by the soldiers, who appear to be securing her.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                        <source src="assets/Sample3Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                        <source src="assets/Sample3Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                        <source src="assets/Sample3TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: In a room filled with potted plants stacked on shelves, two individuals, one in a gray coat and the other in a blue coat, are seen being repelled by a force, moving out of the frame. A green-haired woman, standing among the plants, watches the two individuals as they leave. She then turns her head to the right and lowers her hand. The camera gradually zooms out, revealing more of the room and the plants.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                        <source src="assets/Sample4Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                        <source src="assets/Sample4Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                        <source src="assets/Sample4TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: The video shows a clownfish swimming towards a sea anemone in an underwater environment with a purple and green background. The clownfish continues to move closer to the anemone, and the anemone's tentacles start to rise. The clownfish begins to swim into the anemone, and the tentacles continue to lift. The clownfish fully enters the anemone, and the tentacles surround it. The clownfish moves deeper into the anemone, and the tentacles cover most of its body. The clownfish starts to rise within the anemone, and the tentacles begin to lower. The clownfish continues to ascend, and the tentacles start to relax. The clownfish reaches the top of the anemone, and the tentacles are almost fully relaxed.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample5.png">
+                        <source src="assets/Sample5Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample5.png">
+                        <source src="assets/Sample5Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample5.png">
+                        <source src="assets/Sample5TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A wild cat is seen gripping a piece of wood with its paw and begins licking it. The cat continues to lick the wood, moving its head closer and more deeply into the crevice. The cat's head is fully immersed in the wood as it licks it vigorously. The cat briefly lifts its head, revealing its face, before continuing to lick the wood. The cat looks around briefly, then resumes licking the wood with focused attention.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample6.png">
+                        <source src="assets/Sample6Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample6.png">
+                        <source src="assets/Sample6Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample6.png">
+                        <source src="assets/Sample6TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A young girl with curly hair, wearing a green jacket and a pink backpack, is sitting in the front passenger seat of a car. She opens the car door and begins to exit, still hugging herself. The girl steps out of the car and turns to look at the man sitting in the driver's seat. The man, who has a beard, waves at her and gently touches her head. The girl then turns and walks towards a nearby gate, where other children with backpacks are also heading.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample7.png">
+                        <source src="assets/Sample7Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample7.png">
+                        <source src="assets/Sample7Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample7.png">
+                        <source src="assets/Sample7TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A boy with a worried expression is walking down a residential street at sunset, holding a small object in his right hand. He continues to walk while looking at the object, his expression remaining anxious. The boy then lowers the object to his side and starts to run forward, his mouth open as if speaking. The background shows houses with green roofs, a fence, and trees, all under a warm, orange sky.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample8.png">
+                        <source src="assets/Sample8Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample8.png">
+                        <source src="assets/Sample8Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample8.png">
+                        <source src="assets/Sample8TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A woman wearing a white sun hat and a blue dress with pink trim is standing in a green, outdoor setting with trees and grass in the background. She smiles and holds the brim of her hat with both hands, swaying her body slightly. She continues to smile and adjust her hat, moving her hands around the brim. The woman then starts to walk forward while still holding the hat and swaying her body. Finally, she adjusts the hat by lifting it slightly and positioning it on her head.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample9.png">
+                        <source src="assets/Sample9Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample9.png">
+                        <source src="assets/Sample9Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample9.png">
+                        <source src="assets/Sample9TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <div class="prompt-box">
+                Prompt: A woman, wearing a yellow and white striped sweater, holds up a colorful striped shirt with a red tongue logo on it, showing it to the camera while talking. She adjusts the shirt, displaying it from different angles. She then looks at the shirt's tag, removes it, and continues to talk while gesturing with her hand. The background includes a desk with sunflowers, makeup brushes, and framed pictures.
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="video-container base">
+                    <span class="method-label">Base</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample10.png">
+                        <source src="assets/Sample10Base.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container dancegrpo">
+                    <span class="method-label">DanceGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample10.png">
+                        <source src="assets/Sample10Dance.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container tagrpo">
+                    <span class="method-label">TAGRPO</span>
+                    <video autoplay loop muted playsinline poster="assets/Sample10.png">
+                        <source src="assets/Sample10TA.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
