@@ -28,6 +28,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            /* 确保在 iOS Safari 上正常自动播放 */
+            pointer-events: none;
         }
 
         .dancegrpo {
@@ -69,18 +71,18 @@
 <body class="antialiased">
     <main class="max-w-7xl mx-auto px-4 py-8 space-y-6">
         <!-- 导航按钮 -->
-        <div class="flex justify-center space-x-6 mb-8">
-            <a href="#more-vis" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out">
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+            <a href="#more-vis" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out text-center">
                 More I2V Visualization Comparisons
             </a>
-            <a href="#ablation" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out">
+            <a href="#ablation" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out text-center">
                 Ablation Study on <span class="italic font-serif">&gamma;</span>
             </a>
         </div>
 
-        <div id="more-vis" class="relative flex pb-12 pt-4 items-center">
+        <div id="more-vis" class="relative flex py-8 sm:py-12 items-center">
             <div class="flex-grow border-t-4 border-gray-800 rounded-full"></div>
-            <span class="flex-shrink-0 mx-6 text-gray-800 text-2xl font-bold">More I2V Visualization Comparisons</span>
+            <span class="flex-shrink-0 mx-4 sm:mx-6 text-gray-800 text-xl sm:text-2xl font-bold text-center">More I2V Visualization Comparisons</span>
             <div class="flex-grow border-t-4 border-gray-800 rounded-full"></div>
         </div>
         
@@ -91,19 +93,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample5Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample5Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample5TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -117,19 +119,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample1Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample1Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample1TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -143,19 +145,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample4Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample4Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample4TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -173,19 +175,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
                         <source src="assets/Sample3Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
                         <source src="assets/Sample3Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
                         <source src="assets/Sample3TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -199,19 +201,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
                         <source src="assets/Sample2Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
                         <source src="assets/Sample2Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
                         <source src="assets/Sample2TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -230,19 +232,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample9Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample9Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample9TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -256,19 +258,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample8Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample8Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample8TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -286,19 +288,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample6Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample6Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample6TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -316,19 +318,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label">Base</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample7Base.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container dancegrpo">
                     <span class="method-label">DanceGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample7Dance.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container tagrpo">
                     <span class="method-label">TAGRPO</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample7TA.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -338,9 +340,9 @@
        
 
         
-        <div id="ablation" class="relative flex py-16 items-center">
+        <div id="ablation" class="relative flex py-8 sm:py-16 items-center">
             <div class="flex-grow border-t-4 border-gray-800 rounded-full"></div>
-            <span class="flex-shrink-0 mx-6 text-gray-800 text-2xl font-bold">Ablation Study on <span class="italic font-serif">&gamma;</span></span>
+            <span class="flex-shrink-0 mx-4 sm:mx-6 text-gray-800 text-xl sm:text-2xl font-bold text-center">Ablation Study on <span class="italic font-serif">&gamma;</span></span>
             <div class="flex-grow border-t-4 border-gray-800 rounded-full"></div>
         </div>
 
@@ -351,19 +353,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=1</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample10Gamma1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=3</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample10Gamma3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=5</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/111/FFF?text=Loading+Video">
                         <source src="assets/Sample10Gamma5.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -377,19 +379,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=1</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
                         <source src="assets/Sample11Gamma1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=3</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
                         <source src="assets/Sample11Gamma3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=5</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/222/FFF?text=Loading+Video">
                         <source src="assets/Sample11Gamma5.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -403,19 +405,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=1</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
                         <source src="assets/Sample12Gamma1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=3</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
                         <source src="assets/Sample12Gamma3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container base">
                     <span class="method-label"><span class="italic font-serif">&gamma;</span>=5</span>
-                    <video autoplay loop muted playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
+                    <video autoplay loop muted playsinline webkit-playsinline poster="https://placehold.co/600x338/333/FFF?text=Loading+Video">
                         <source src="assets/Sample12Gamma5.mp4" type="video/mp4">
                     </video>
                 </div>
